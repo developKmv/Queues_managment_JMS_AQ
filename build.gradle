@@ -1,0 +1,31 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'ru.app'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // https://mvnrepository.com/artifact/org.springframework/spring-jms
+    implementation group: 'org.springframework', name: 'spring-jms', version: '5.3.9'
+    // https://mvnrepository.com/artifact/org.apache.activemq/activemq-client
+    implementation group: 'org.apache.activemq', name: 'activemq-client', version: '5.16.3'
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-core
+    implementation group: 'ch.qos.logback', name: 'logback-core', version: '1.2.5'
+// https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
